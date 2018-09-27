@@ -1,0 +1,83 @@
+section.authorization{
+    .auth-wrapper{
+        width: 60%;
+        height: 500px;
+        margin: 200px auto;
+        background-color: #fff;
+        .demo-block{
+            height: 500px;
+            transform: translateX(-50px) scale(1.1);
+            border-radius: 5px;
+            color: #ffffff;
+            padding: 50px;
+            text-align: center;
+            i:first-child{
+                font-size: 50px;
+                color: #ffffff;
+            }
+            p{
+                margin-top: 20px;
+            }
+            button{
+                margin-top: 20px;
+                position: relative;
+                span{
+                    display: inline-block;
+                    margin-right: 10px;
+                }
+                i{
+                    font-size: 14px;
+                    line-height: 36px;
+                    position: absolute;
+                    top: 0px;
+                    bottom: 0px;
+                    right: 0px;
+                    width:30px;
+                    text-align: center;
+                    display: block;
+                    border-radius: 0px 50px 50px 0px;
+                }
+                border-radius: 50px;
+                font-size: 12px;
+                font-weight: bold;
+            }
+        }
+        .form-module{
+            padding: 20px;
+            .tabs{
+                display: inline-block;
+            }
+            form{
+                padding-right: 30px;
+                text-align: center;
+                margin-top: 20px;
+                input{
+                    border-bottom:1px solid #eee
+                }
+                button{
+                    border-radius: 50px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1200px) {
+    section.authorization{
+        .auth-wrapper{
+            height: auto;
+            padding-bottom: 20px;
+            .demo-block{
+                height: auto;
+                transform: translateX(0px) scale(1.1);
+            }
+        }
+    }
+}
+@media (max-width: 800px) {
+    section.authorization{
+        .auth-wrapper{
+            width: 90%;
+            margin-top: 50px;
+        }
+    }
+}

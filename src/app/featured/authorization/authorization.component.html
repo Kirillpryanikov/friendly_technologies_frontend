@@ -1,0 +1,56 @@
+<section class="authorization">
+  <div class="auth-wrapper z-depth-2">
+      <div class="row">
+        <div class="col l6 m12 s12">
+          <div class="demo-block blue z-depth-2">
+              <i class="material-icons">thumb_up</i>
+              <h5>Hello world</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, dolores?</p>
+              <button materialize="tooltip" data-position="bottom" data-delay="50" data-tooltip="I am tooltip" class="btn tooltipped blue-text white" (click)="testBtnHandler()"><span>button</span> <i class="material-icons blue-text">arrow_forward</i></button>
+          </div>
+        </div>
+        <div class="col l6 m12 s12 form-module">
+              <ul class="tabs tabs-centered" materialize="tabs" data-swipeable="true">
+                <li class="tab"><a class="active" href="#login">Login</a></li>
+                <li class="tab"><a href="#register">Register</a></li>
+              </ul>
+              <div id="login">
+                  <form #loginForm="ngForm">
+                      <div class="input-field">
+                          <input type="email" name="email" ngModel>
+                          <label for="email">Email</label>
+                      </div>
+                      <div class="input-field">
+                        <input type="password" name="password" ngModel>
+                        <label for="password">Password</label>
+                      </div>
+                      <button type="button" class="btn blue" (click)="login(loginForm)">Login</button> 
+                    </form>
+              </div>
+              <div id="register">
+                  <form #registerForm="ngForm">
+                      <div class="input-field">
+                          <input type="text" name="name" ngModel>
+                          <label for="name">Name</label>
+                      </div>
+                      <div class="input-field">
+                          <input type="email" name="email" ngModel>
+                          <label for="email">Email</label>
+                      </div>
+                      <div class="input-field">
+                        <input type="password" name="password" ngModel>
+                        <label for="password">Password</label>
+                      </div>
+                      <div class="input-field">
+                          <input type="password" name="repeat_password" ngModel>
+                          <label for="password">Repeat Password</label> 
+                        </div>
+                      <button type="button" class="btn blue" (click)="register(registerForm)">Register</button> 
+                    </form>
+              </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<app-errors *ngIf="Errors.data.length > 0" [errors]="Errors"></app-errors>

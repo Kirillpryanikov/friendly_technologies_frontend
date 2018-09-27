@@ -1,0 +1,44 @@
+.container{
+    width: 60%;
+    margin-top: 40px;
+}
+
+.user-data{
+    position: relative;
+    .name{
+        font-weight: bold;
+    }
+    p{
+        font-size: 12px;
+    }
+    &:hover .dropdown-data{
+        top: 100%;
+        opacity: 1;
+        visibility: visible;
+    }
+    .dropdown-data{
+        position: absolute;
+        top: 120%;
+        opacity: 0;
+        transition: 0.3s all;
+        visibility: hidden;
+        background-color: #fff;
+        width: 150px;
+        border-radius: 5px;
+        ul {
+            li{
+                a{
+                    padding: 10px 15px;
+                    display: block;
+                    color: #555555;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+.wrapper{
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
